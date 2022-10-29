@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初识Vue</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+
+  <!-- 
+    {{xxx}} xxx中要写js表达式
+    注意区分: js表达式和js代码(语句)
+     1:表达式:一个表达式会产生一个值,可以放在任何一个需要值的地方
+     (1). a
+     (2). a+b
+     (3). demo(1)
+     (4). x === y ? 'a' : 'b'
+     2.js语句(代码)
+     (1).if() {}
+     (2).for() {}
+ 
+   -->
+
+
+
+  <!-- 准备好一个容器 -->
+  <div class="root">
+    <h1>Hello,{{name}} {{Date.now()}}</h1>
+  </div>
+
+  <script type="text/javascript">
+    Vue.config.productionTip = false //阻止Vue在启动时生成生成提示
+
+    //创建Vue实例
+    new Vue({
+      el: '.root',
+      data: {
+        name: 'saleenji'
+      }
+    })
+  </script>
+</body>
+
+</html>
